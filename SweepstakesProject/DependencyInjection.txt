@@ -1,0 +1,12 @@
+﻿In my marketing firm class I use dependency injection in the constructor.
+By passing in type ISweepstakesManager, it does not matter what type of manager is passed in as long as its of that type.
+This gets rid of the constructor being DEPENDENT on one specific type of manager (stack or queue).
+I also use dependency injection in the contestant and winner class.
+By passing in type IContest, it does not matter what type of contestant they are (winner or loser), as long as its of that type.
+This also gets rid of the notify method being dependent on a certain type of contestant.
+--------------------------------------------------------------------------------------------------------------------------------------
+The observer pattern is also being used in my contestant, winner and sweepstakes class.
+By having 2 different notification messages and 2 types of contestants (regular and winner), we can give 2 different messages 2 them based on their type.
+--------------------------------------------------------------------------------------------------------------------------------------
+Factory pattern is being used in the simulation class.
+By having the user input a specific value, we can construct a certain manager based on the input.

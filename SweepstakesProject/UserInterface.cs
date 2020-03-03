@@ -33,5 +33,13 @@ namespace SweepstakesProject
             return answer;
 
         }
+        public static void WinnerMessage(IContest contestant)
+        {
+            Console.WriteLine("Congratulations on winning {0}", contestant);
+        }
+        public static void LoserMessage(IContest contestant)
+        {
+            Console.WriteLine("Sorry but you are not a winner {0}", contestant);
+        }
     }
 }

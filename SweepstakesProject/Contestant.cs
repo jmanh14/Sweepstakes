@@ -6,11 +6,24 @@ using System.Threading.Tasks;
 
 namespace SweepstakesProject
 {
-    class Contestant
+    class Contestant : IContest
     {
-        public string FirstName;
-        public string LastName;
-        public string EmailAddress;
-        public int RegistrationNumber;
+        //Properties
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string EmailAddress { get; set; }
+        public int RegistrationNumber { get; set; }
+        public bool isWinner = false;
+        public void Notify(IContest contestant)
+        {
+            if (!isWinner)
+            {
+                UserInterface.WinnerMessage(contestant);
+            }
+            else
+            {
+                UserInterface.LoserMessage(contestant);
+            }
+        }
     }
 }
